@@ -13,56 +13,6 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
-    name: "activity_recognition.sdm660",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/hw/activity_recognition.sdm660.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libhardware",
-                "libsensor1",
-                "libsensor_reg",
-                "libdiag",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/activity_recognition.sdm660.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libhardware",
-                "libsensor1",
-                "libsensor_reg",
-                "libdiag",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "keystore.sdm660",
     owner: "xiaomi",
     strip: {
@@ -117,38 +67,15 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/vendor.qti.hardware.fingerprint@1.0.so",
             ],
-            shared_libs: [
-                "libhidlbase",
-                "libhidltransport",
-                "libhwbinder",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
         },
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so",
             ],
-            shared_libs: [
-                "libhidlbase",
-                "libhidltransport",
-                "libhwbinder",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
         },
     },
     compile_multilib: "both",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -224,6 +151,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libMiWatermark.so",
             ],
             shared_libs: [
+                "libmiwatermark_shim",
                 "libcutils",
                 "libutils",
                 "libcamera_metadata",
@@ -246,6 +174,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -360,16 +289,10 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libVDSuperPhotoAPI.so",
             ],
-            shared_libs: [
-                "liblog",
-                "libcdsprpc",
-                "libm",
-                "libdl",
-                "libc",
-            ],
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -10698,20 +10621,10 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmcamera2_cpp_module.so",
             ],
-            shared_libs: [
-                "libcutils",
-                "libmmcamera2_mct",
-                "libmmcamera2_pp_buf_mgr",
-                "libmmcamera_dbg",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -10753,20 +10666,10 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmcamera2_iface_modules.so",
             ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libmmcamera2_mct",
-                "libmmcamera2_isp_modules",
-                "libmmcamera_dbg",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -10782,21 +10685,10 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmcamera2_imglib_modules.so",
             ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libmmcamera2_mct",
-                "libmmcamera_imglib",
-                "libmmcamera_dbg",
-                "libcdsprpc",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -10812,17 +10704,10 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmcamera2_is.so",
             ],
-            shared_libs: [
-                "libcutils",
-                "libmmcamera_dbg",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -10838,19 +10723,10 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmcamera2_isp_modules.so",
             ],
-            shared_libs: [
-                "libcutils",
-                "libmmcamera2_mct",
-                "libmmcamera_dbg",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -10866,18 +10742,10 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmcamera2_mct.so",
             ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libmmcamera_dbg",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -10988,19 +10856,10 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmcamera2_q3a_core.so",
             ],
-            shared_libs: [
-                "libcutils",
-                "libmmcamera2_stats_algorithm",
-                "libmmcamera2_stats_lib",
-                "libmmcamera_dbg",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -11048,17 +10907,10 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmcamera2_stats_algorithm.so",
             ],
-            shared_libs: [
-                "libcutils",
-                "libmmcamera_dbg",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -11074,18 +10926,10 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmcamera2_stats_lib.so",
             ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libmmcamera_dbg",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -11101,32 +10945,10 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmcamera2_stats_modules.so",
             ],
-            shared_libs: [
-                "libcutils",
-                "libmmcamera2_mct",
-                "libmmcamera2_stats_lib",
-                "libmmcamera2_stats_algorithm",
-                "libxml2",
-                "libutils",
-                "libmmcamera_dbg",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libvidhance",
-                "libvidhance_gyro",
-                "libhidlbase",
-                "libhidltransport",
-                "android.frameworks.sensorservice@1.0",
-                "libmmcamera2_is",
-                "libsensor1",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -11201,26 +11023,10 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmcamera_bokeh.so",
             ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libGLESv2_adreno",
-                "libEGL",
-                "libGLESv2",
-                "libhardware",
-                "libqdMetaData",
-                "libutils",
-                "libui",
-                "libmmcamera_dbg",
-                "libmmcamera_imglib",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -11398,15 +11204,10 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmcamera_faceproc.so",
             ],
-            shared_libs: [
-                "libc++",
-                "libdl",
-                "libc",
-                "libm",
-            ],
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -11593,6 +11394,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -13094,25 +12896,10 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib/libmmcamera_ppeiscore.so",
             ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libGLESv2_adreno",
-                "libEGL",
-                "libGLESv2",
-                "libhardware",
-                "libqdMetaData",
-                "libutils",
-                "libmmcamera_dbg",
-                "libmmcamera_imglib",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -14393,60 +14180,6 @@ cc_prebuilt_library_shared {
                 "libm",
                 "libdl",
                 "liblog",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libthermalfeature",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libthermalfeature.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libcrypto",
-                "libssl",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libthermalioctl",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libthermalioctl.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
             ],
         },
     },

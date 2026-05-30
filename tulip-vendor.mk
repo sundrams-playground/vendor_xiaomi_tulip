@@ -50,20 +50,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/tulip/proprietary/vendor/etc/camera/tulip_s5k5e8_ofilm_india_i_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/tulip_s5k5e8_ofilm_india_i_chromatix.xml \
     vendor/xiaomi/tulip/proprietary/vendor/etc/camera/tulip_s5k5e8_qtech_global_ii_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/tulip_s5k5e8_qtech_global_ii_chromatix.xml \
     vendor/xiaomi/tulip/proprietary/vendor/etc/camera/tulip_s5k5e8_qtech_india_ii_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/tulip_s5k5e8_qtech_india_ii_chromatix.xml \
-    vendor/xiaomi/tulip/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
-    vendor/xiaomi/tulip/proprietary/vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@3.0-service-qti.rc \
     vendor/xiaomi/tulip/proprietary/vendor/etc/permissions/com.fingerprints.extension.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.fingerprints.extension.xml \
     vendor/xiaomi/tulip/proprietary/vendor/etc/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     vendor/xiaomi/tulip/proprietary/vendor/etc/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf \
     vendor/xiaomi/tulip/proprietary/vendor/etc/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
-    vendor/xiaomi/tulip/proprietary/vendor/firmware/a512_zap.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/a512_zap.b00 \
-    vendor/xiaomi/tulip/proprietary/vendor/firmware/a512_zap.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/a512_zap.b01 \
-    vendor/xiaomi/tulip/proprietary/vendor/firmware/a512_zap.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/a512_zap.b02 \
-    vendor/xiaomi/tulip/proprietary/vendor/firmware/a512_zap.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/a512_zap.elf \
-    vendor/xiaomi/tulip/proprietary/vendor/firmware/a512_zap.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/a512_zap.mdt \
-    vendor/xiaomi/tulip/proprietary/vendor/firmware/a530_pfp.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a530_pfp.fw \
-    vendor/xiaomi/tulip/proprietary/vendor/firmware/a530_pm4.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a530_pm4.fw \
-    vendor/xiaomi/tulip/proprietary/vendor/firmware/a540_gpmu.fw2:$(TARGET_COPY_OUT_VENDOR)/firmware/a540_gpmu.fw2 \
     vendor/xiaomi/tulip/proprietary/vendor/firmware/cpp_firmware_v1_10_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_10_0.fw \
     vendor/xiaomi/tulip/proprietary/vendor/firmware/cpp_firmware_v1_12_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_12_0.fw \
     vendor/xiaomi/tulip/proprietary/vendor/firmware/cpp_firmware_v1_1_1.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_1_1.fw \
@@ -88,13 +78,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     activity_recognition.sdm660 \
-    android.hardware.gatekeeper@1.0-impl-qti \
-    android.hardware.keymaster@3.0-impl-qti \
     keystore.sdm660 \
-    libsensor1 \
-    libsensor_reg \
-    libthermalclient \
-    sensors.ssc \
     vendor.qti.hardware.fingerprint@1.0 \
     camera.sdm660 \
     libMiWatermark \
@@ -114,7 +98,6 @@ PRODUCT_PACKAGES += \
     libarcsoft_high_dynamic_range \
     libc++_shared \
     libcamera_scene \
-    libcdsprpc \
     libchromatix_tulip_ov02a10_ofilm_global_ii_common \
     libchromatix_tulip_ov02a10_ofilm_global_ii_cpp_liveshot \
     libchromatix_tulip_ov02a10_ofilm_global_ii_cpp_preview \
@@ -495,7 +478,6 @@ PRODUCT_PACKAGES += \
     libflash_pmic \
     libft2vendor \
     libhal_dbg \
-    libhdr_tm \
     libjpegdhw \
     libjpegdmahw \
     libjpegehw \
@@ -520,7 +502,6 @@ PRODUCT_PACKAGES += \
     libmmcamera_arcsoftbokeh_lib \
     libmmcamera_atmel_at24c32e_eeprom \
     libmmcamera_bokeh \
-    libmmcamera_dbg \
     libmmcamera_depth_map \
     libmmcamera_dummyalgo \
     libmmcamera_eebinparse \
@@ -638,9 +619,4 @@ PRODUCT_PACKAGES += \
     libvendor.goodix.hardware.fingerprint@1.0-service \
     libvendor.goodix.hardware.fingerprint@1.0 \
     FingerprintExtensionService \
-    com.fingerprints.extension \
-    cnss-daemon \
-    android.hardware.gatekeeper@1.0-service-qti \
-    android.hardware.keymaster@3.0-service-qti \
-    sensors.qti \
-    thermal-engine
+    com.fingerprints.extension
